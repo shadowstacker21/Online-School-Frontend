@@ -4,19 +4,33 @@ import MakePayment from './MakePayment';
 
 const CoursePurchase = () => {
     const [course,setCourse]=useState([])
+    const [loading,setLoading]=useState(false)
        useEffect(() => {
     const checkPurchase = async () => {
+      setLoading(true)
       try {
         const res = await authApiClient.get('/my-purchases/');
         setCourse(res.data)
       
       } catch (err) {
         console.log(err);
+      }finally{
+        setLoading(false)
       }
     };
     checkPurchase();
   }, []);
   
+
+      if(loading){
+          return (
+             <div className='flex justify-center items-center py-10 min-h-screen'>
+                        <span className="loading loading-spinner loading-xl text-secondary"></span>
+                     </div>
+          )
+        }
+
+
     return (
         <div id="purchase-table" className="overflow-x-auto">
   <table className="table table-zebra">

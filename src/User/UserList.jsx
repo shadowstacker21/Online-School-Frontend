@@ -5,27 +5,39 @@ import DeleteUser from './DeleteUser';
 import ErrorAlert from '../Alert/ErrorAlert';
 import SuccessAlert from '../Alert/SuccessAlert';
 
+
 const UserList = () => {
     const [user,setUser]=useState([]);
     const [loading,setLoading]=useState(false)
     const [err,setErr]=useState("")
     const [msg,setMsg]=useState("")
-    useEffect(()=>{
-     const fetchUser = async () => {
-        setLoading(true)
-      try {
-        const res = await authApiClient.get("/user/");
-        setUser(res.data);
-        console.log(res.data);
-      } catch (error) {
-        console.error(error);
-      }finally{
-        setLoading(false)
-      }
-    };
 
+ const fetchUser = async () => {
+    setLoading(true);
+    try {
+      const res = await authApiClient.get("/user/");
+      setUser(res.data);
+      console.log(res.data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+ 
+  useEffect(() => {
     fetchUser();
-    },[])
+  }, []);
+
+    useEffect(()=>{
+      if(err||msg){
+        const timer=setTimeout(()=>{
+          setErr("")||setMsg("")
+        },3000)
+        return ()=>clearTimeout(timer)
+      }
+    })
 
     if(loading){
         return (
@@ -73,7 +85,7 @@ const UserList = () => {
             </Link>
             </td>
             <td>
-              <DeleteUser setErr={setErr} setMsg={setMsg} id={u.id}/>
+              <DeleteUser fetchUser={fetchUser}  setErr={setErr} setMsg={setMsg} id={u.id}/>
             </td>
       </tr>
         ))}
