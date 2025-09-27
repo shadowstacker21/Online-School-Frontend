@@ -9,7 +9,7 @@ const Feature = () => {
         {
             icon:<FaUserGraduate className='text-black-500 text-4xl '/>,
             title:"Empower Teachers",
-            description:"Every teacher in our platform is a certified graduate."
+            description:"Every teacher in our platform is a certified graduate and talented."
         },
         {
             icon:<MdEventAvailable className='text-black-500 text-4xl'/>,
