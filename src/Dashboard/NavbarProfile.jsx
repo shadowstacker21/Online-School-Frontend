@@ -4,7 +4,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuthContext from '../hooks/useAuthContext';
 
-const Navbar = ({sidebarOpen}) => {
+const NavbarProfile = ({sidebarOpen}) => {
     const {logout,user}=useAuthContext()
     const navigate=useNavigate()
     return (
@@ -66,4 +66,4 @@ const Navbar = ({sidebarOpen}) => {
     );
 };
 
-export default Navbar;
+export default NavbarProfile;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { GiGraduateCap } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 

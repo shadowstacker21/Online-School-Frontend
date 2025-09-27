@@ -1,7 +1,7 @@
 import  { useState } from 'react';
-import Navbar from '../Dashboard/navbar';
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../Dashboard/sidebar';
+import NavbarProfile from '../Dashboard/NavbarProfile';
 
 const DashboardLayout = () => {
     const [sidebarOpen,setSidebarOpen]=useState(false)
@@ -21,7 +21,7 @@ const DashboardLayout = () => {
             {/* Page Content */}
             <div className='drawer-content flex flex-col'>
                 {/* Navbar */}
-                <Navbar sidebarOpen={sidebarOpen}/>
+                <NavbarProfile sidebarOpen={sidebarOpen}/>
                 
                 <main className='p-6'>
                     <Outlet/>
