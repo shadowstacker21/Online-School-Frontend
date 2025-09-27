@@ -10,7 +10,7 @@ import { FaUserGroup } from 'react-icons/fa6';
 
 
 
-const Sidebar = () => {
+const DashboardSidebar = () => {
     const {user}=useAuthContext();
     const userMenus = [
         {to:"/dashboard",icon:LayoutDashboard,label:"Dashboard"},
@@ -78,4 +78,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default DashboardSidebar;
