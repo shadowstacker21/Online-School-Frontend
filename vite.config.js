@@ -7,9 +7,9 @@ export default defineConfig({
    plugins: [react(),
      tailwindcss(),
   ],
-   build: {
-    outDir: "dist"
-  },
-  base: "./"
+  //  build: {
+  //   outDir: "dist"
+  // },
+  // base: "./"
   
 })

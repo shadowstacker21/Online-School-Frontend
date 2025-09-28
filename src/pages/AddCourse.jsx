@@ -1,4 +1,3 @@
-
 import useAuthContext from '../hooks/useAuthContext';
 import CreateCourse from '../Create/CreateCourse';
 
