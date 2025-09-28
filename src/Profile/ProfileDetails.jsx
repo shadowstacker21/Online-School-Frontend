@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ProfileDetails = () => {
 const {user} = useAuthContext();
 
-    console.log(user);
+  
 
     return (
         <div className="min-h-screen bg-gradient-to-r from-blue-600/10 to-purple-600/10 flex justify-center items-center p-6">

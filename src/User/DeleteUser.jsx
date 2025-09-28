@@ -20,14 +20,14 @@ const DeleteUser = ({id,setErr,setMsg,  fetchUser}) => {
 
     setLoading(true);
     try {
-      const res = await authApiClient.delete(`/auth/users/${id}/`, {
+      await authApiClient.delete(`/auth/users/${id}/`, {
      
         data: {
           current_password: password,
         },
       });
 
-      console.log(res.data);
+     
       setMsg("User Deleted Successfully");
       fetchUser()
     } catch (error) {

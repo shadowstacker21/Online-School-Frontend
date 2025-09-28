@@ -4,7 +4,7 @@ import { IoTrendingUp } from "react-icons/io5";
 
 
 const TopORMost = ({topCourse,topStudent}) => {
-    console.log(topCourse);
+    
 
      const rankColors = ["#FFC107", "#9C27B0"];
      if(!topCourse || !topStudent){

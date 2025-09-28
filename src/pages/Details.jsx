@@ -18,7 +18,7 @@ const Details = () => {
               authApiClient.get(`/courses/${courseId}/`)
                .then((res)=>{
                  setCourse(res.data)
-                 console.log(res.data);
+               
                  setLoading(false)
                })
            

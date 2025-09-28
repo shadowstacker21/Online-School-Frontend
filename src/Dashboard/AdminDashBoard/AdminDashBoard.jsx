@@ -18,7 +18,7 @@ const AdminDashBoard = () => {
    
         authApiClient.get("/admin-dashboard/")
             .then((res)=>{
-                console.log(res.data);
+              
                 setInfo(res.data)
             }).catch((err)=>{
                 console.log(err);

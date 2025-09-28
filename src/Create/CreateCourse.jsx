@@ -26,7 +26,7 @@ const CreateCourse = () => {
       })
  
     },[])
- console.log(teacher);
+
 
     useEffect(()=>{
       authApiClient.get("/departments/")
@@ -52,10 +52,10 @@ const CreateCourse = () => {
         
     
     try {
-        const res = await authApiClient.post("/courses/", formData, {
+         await authApiClient.post("/courses/", formData, {
             headers: { "Content-Type": "multipart/form-data" }
         });
-        console.log(res.data);
+       
         setMsg("Course Created Successfully")
         setTimeout(() => {
             navigate("/dashboard/course");

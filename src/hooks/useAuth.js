@@ -153,11 +153,11 @@ const useAuth=()=>{
       const changePassword= async(data)=>{
         setErrorMsg("");
         try{
-           const res= await apiClient.post("auth/users/set_password/",data,{headers:{
+          await apiClient.post("auth/users/set_password/",data,{headers:{
                 Authorization:`JWT ${authTokens?.access}`
             }})
             setSuccessMsg("Password Change Successfully!")
-            console.log(res);
+            
         }catch(error){
             return handleApiError(error)
         }

@@ -22,7 +22,7 @@ const Coursepage = () => {
                  </div>
         )
     }
-    console.log(courses);
+   
     return (
         <div>
             <Filter 

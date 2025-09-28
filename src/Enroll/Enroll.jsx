@@ -19,8 +19,8 @@ const Enroll = ({course,setMessage}) => {
     setEnrolling(true);
     setMessage("");
     try {
-      const res = await authApiClient.post(`/courses/${course.id}/purchases/`);
-      console.log(res.data);
+      await authApiClient.post(`/courses/${course.id}/purchases/`);
+    
       
       setMessage("Successfully Enrolled!");
       navigate('/dashboard')
