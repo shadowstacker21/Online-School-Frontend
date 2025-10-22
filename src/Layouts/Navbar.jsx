@@ -18,12 +18,17 @@ const Navbar = () => {
         </div>
         
     </div>
+   
     <div className="flex-none">
         <ul className="menu menu-horizontal px-1 space-x-4">
+            <li><Link className='text-lg text-gray-500 font-semibold'>Home</Link></li>
+            <li><Link className='text-lg text-gray-500 font-semibold'>About</Link></li>
+            <li><Link className='text-lg text-gray-500 font-semibold'>Contact Us</Link></li>
         <li><Link to='/login' className='text-lg text-gray-500 font-semibold'>Sign in</Link></li>
         <li>
            <Link to='/register'><button className='btn btn-primary bg-blue-600 rounded-sm'>Get Started</button></Link>
         </li>
+        
         </ul>
     </div>
     </div>

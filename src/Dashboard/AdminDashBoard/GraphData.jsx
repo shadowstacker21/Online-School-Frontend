@@ -33,7 +33,7 @@ const GraphData = ({ info }) => {
           <YAxis allowDecimals={false} />
           <Tooltip />
           <Legend />
-          <Bar dataKey="purchases" fill="black" />
+          <Bar dataKey="purchases" fill="#B28DFF" />
         </BarChart>
       </ResponsiveContainer>
 
@@ -46,7 +46,7 @@ const GraphData = ({ info }) => {
           <YAxis />
           <Tooltip formatter={(value) => `$${value}`} />
           <Legend />
-          <Bar dataKey="sales" fill="black" />
+          <Bar dataKey="sales" fill="#B28DFF" />
         </BarChart>
       </ResponsiveContainer>
 
@@ -62,7 +62,7 @@ const GraphData = ({ info }) => {
           <YAxis />
           <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
           <Legend />
-          <Bar dataKey="revenue" fill="black" />
+          <Bar dataKey="revenue" fill="#B28DFF" />
         </BarChart>
       </ResponsiveContainer>
 
